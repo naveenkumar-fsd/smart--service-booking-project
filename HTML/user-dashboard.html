@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | ServeSmart</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ===== DASHBOARD HEADER ===== -->
+  <header class="dash-header">
+    <div class="dash-left">⚡ ServeSmart</div>
+    <div class="dash-right">
+      <span class="dash-user">Hi, Naveen</span>
+      <a class="btn-outline btn-sm logout-btn">Logout</a>
+
+    </div>
+  </header>
+
+  <!-- ===== DASHBOARD LAYOUT ===== -->
+  <section class="dash-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <a class="active">Dashboard</a>
+      <a>My Bookings</a>
+      <a>Profile</a>
+      <a>Support</a>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dash-content">
+
+      <!-- STATS -->
+      <div class="dash-stats">
+        <div class="stat-card">
+          <h3>Total Bookings</h3>
+          <p>12</p>
+        </div>
+        <div class="stat-card">
+          <h3>Completed</h3>
+          <p>8</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pending</h3>
+          <p>4</p>
+        </div>
+      </div>
+
+      <!-- BOOKINGS -->
+      <section class="dash-section">
+        <h2>Recent Bookings</h2>
+
+        <div class="booking-list">
+          <div class="booking-item">
+            <strong>Plumbing</strong>
+            <span>Tomorrow, 10 AM</span>
+            <span class="status pending">Pending</span>
+          </div>
+
+          <div class="booking-item">
+            <strong>Electrical</strong>
+            <span>Yesterday</span>
+            <span class="status completed">Completed</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </section>
+<script src="../js/dashboard.js"></script>
+<script src="../js/script.js"></script>
+
+
+</body>
+</html>

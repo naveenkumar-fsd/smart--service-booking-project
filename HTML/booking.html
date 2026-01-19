@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service | ServeSmart</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">⚡ ServeSmart</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="booking.html">Book</a>
+        <a href="login.html" class="btn-outline">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== BOOKING HEADER ===== -->
+  <section class="booking-header">
+    <h1>Book a Service</h1>
+    <p>Select a service and schedule your appointment easily.</p>
+  </section>
+
+  <!-- ===== BOOKING LAYOUT ===== -->
+  <section class="booking-layout">
+
+    <!-- LEFT: SERVICES -->
+    <div class="booking-services">
+      <h2>Choose a Service</h2>
+
+      <div class="booking-service-grid">
+        <div class="booking-service-card">
+          <h3>Plumbing</h3>
+          <p>Leak fixing & pipe work</p>
+        </div>
+
+        <div class="booking-service-card">
+          <h3>Electrical</h3>
+          <p>Wiring & appliance setup</p>
+        </div>
+
+        <div class="booking-service-card">
+          <h3>Cleaning</h3>
+          <p>Home & office cleaning</p>
+        </div>
+
+        <div class="booking-service-card">
+          <h3>Appliance Repair</h3>
+          <p>AC, fridge, washing machine</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="booking-form-card">
+      <h2>Schedule Details</h2>
+
+      <!-- ✅ IMPORTANT: form id -->
+      <form id="bookingForm">
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <div class="form-group">
+          <label>Time</label>
+          <input type="time" id="time" required />
+        </div>
+
+        <div class="form-group">
+          <label>Address</label>
+          <textarea
+            id="address"
+            rows="3"
+            placeholder="Enter your service address"
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary booking-btn">
+          Confirm Booking
+        </button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 ServeSmart. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/booking.js"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>

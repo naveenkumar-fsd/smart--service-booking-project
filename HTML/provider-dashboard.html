@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provider Dashboard | ServeSmart</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="dash-header">
+    <div class="dash-left">⚡ ServeSmart</div>
+    <div class="dash-right">
+      <span class="dash-user">Provider Panel</span>
+      <a class="btn-outline btn-sm logout-btn">Logout</a>
+    </div>
+  </header>
+
+  <section class="dash-layout">
+
+    <aside class="dash-sidebar">
+      <a class="active">Dashboard</a>
+      <a>Service Requests</a>
+      <a>My Services</a>
+      <a>Earnings</a>
+    </aside>
+
+    <main class="dash-content">
+
+      <div class="dash-stats">
+        <div class="stat-card">
+          <h3>New Requests</h3>
+          <p>5</p>
+        </div>
+        <div class="stat-card">
+          <h3>Accepted</h3>
+          <p>3</p>
+        </div>
+        <div class="stat-card">
+          <h3>Earnings</h3>
+          <p>₹12,500</p>
+        </div>
+      </div>
+
+      <section class="dash-section">
+        <h2>Service Requests</h2>
+
+        <div class="booking-list">
+          <div class="booking-item">
+            <strong>AC Repair</strong>
+            <span>Today, 3 PM</span>
+            <button class="btn-primary btn-sm">Accept</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </section>
+<script src="../js/dashboard.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

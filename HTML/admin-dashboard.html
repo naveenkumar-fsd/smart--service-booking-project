@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | ServeSmart</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="dash-header admin">
+    <div class="dash-left">⚡ ServeSmart Admin</div>
+    <div class="dash-right">
+      <span class="dash-user">Admin</span>
+      <a class="btn-outline btn-sm logout-btn">Logout</a>
+
+    </div>
+  </header>
+
+  <section class="dash-layout">
+
+    <aside class="dash-sidebar">
+      <a class="active">Overview</a>
+      <a>Users</a>
+      <a>Providers</a>
+      <a>Bookings</a>
+      <a>Reports</a>
+    </aside>
+
+    <main class="dash-content">
+
+      <div class="dash-stats">
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <p>1,240</p>
+        </div>
+        <div class="stat-card">
+          <h3>Providers</h3>
+          <p>320</p>
+        </div>
+        <div class="stat-card">
+          <h3>Bookings</h3>
+          <p>2,860</p>
+        </div>
+      </div>
+
+      <h2>Contact Requests</h2>
+
+<table id="contactTable" border="1" width="100%" style="margin-top:15px;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Service</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+    </main>
+  </section>
+<script src="../js/dashboard.js"></script>
+<script src="../js/script.js"></script>
+
+<script>
+async function loadContacts() {
+  try {
+    const res = await fetch("http://localhost:8080/api/contact");
+    const data = await res.json();
+
+    const tbody = document.querySelector("#contactTable tbody");
+    tbody.innerHTML = "";
+
+    data.forEach(c => {
+      const row = `
+        <tr>
+          <td>${c.name}</td>
+          <td>${c.email}</td>
+          <td>${c.serviceType}</td>
+          <td>${c.message}</td>
+        </tr>
+      `;
+      tbody.innerHTML += row;
+    });
+  } catch (err) {
+    console.error(err);
+    alert("Failed to load contact requests");
+  }
+}
+
+loadContacts();
+</script>
+
+
+</body>
+</html>
+
